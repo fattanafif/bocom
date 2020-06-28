@@ -3,7 +3,7 @@
 const rp = require('request-promise')
 
 function makeid(length) {
-    var result           = '';
+    var result           = '+';
     var characters       = '0123456789';
     var charactersLength = characters.length;
     for ( var i = 0; i < length; i++ ) {
@@ -13,11 +13,12 @@ function makeid(length) {
  }
 
 const data = {
-  email: `fattancyber+${makeid(3)}@gmail.com`,
-  password: '@qwerty245'
+  email: `emailu${makeid(2)}@gmail.com`,
+  password: '@pwlu'
 }
 
 
+ 
 const request = rp.defaults({
   baseUrl: 'https://iphone-xml.booking.com/json/',
   json: true,
@@ -28,7 +29,7 @@ const request = rp.defaults({
     network_type: 'data',
     languagecode: 'en-us',
     display: 'normal_xxhdpi',
-    affiliate_id: 592642
+    affiliate_id: 582828
   },
   headers: {
     'X-LIBRARY': 'okhttp+network-api',
